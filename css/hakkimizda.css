@@ -5,7 +5,7 @@
 }
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: #121212;
+  background: #121212;
   color: #e0e0e0;
   line-height: 1.6;
 }
@@ -40,31 +40,16 @@ nav a:hover {
   margin: 2rem auto;
   padding: 0 1.5rem;
 }
-.welcome {
+.about {
   text-align: center;
-  margin-bottom: 3rem;
 }
-.welcome h2 {
+.about h2 {
   color: #ff6b35;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
-.products-list {
-  background: #1e1e1e;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-}
-.products-list h3 {
-  color: #ffd166;
-  margin-bottom: 1.2rem;
-  text-align: center;
-}
-.products-list ul {
-  list-style-position: inside;
+.about p {
+  margin: 1.2rem 0;
   font-size: 1.1rem;
-}
-.products-list li {
-  margin: 0.8rem 0;
 }
 footer {
   background: #0f0f0f;
