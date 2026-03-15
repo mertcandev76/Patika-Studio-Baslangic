@@ -1,105 +1,148 @@
-body {
+* {
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
-  color: #000000;
-  font-family:
-    Times New Roman,
-    serif; /* 90'lar havası için serif */
-  font-size: 13px;
+  box-sizing: border-box;
 }
-a {
-  color: #0000ff;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #202124;
+}
+header {
+  padding: 16px 24px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  font-size: 14px;
+}
+header a {
+  color: #000;
+  text-decoration: none;
+  padding: 8px;
+}
+header a:hover {
   text-decoration: underline;
 }
-a:visited {
-  color: #551a8b;
+.apps-icon {
+  width: 30px;
+  height: 30px;
+  background: url("https://ssl.gstatic.com/gb/images/i1_1967ca6a.png") no-repeat
+    center;
+  background-size: contain;
+  opacity: 0.7;
 }
-a:hover,
-a:active {
-  color: #ff0000;
-}
-.container {
-  text-align: center;
-  margin-top: 100px; /* Üstten boşluk – logo ortada olsun */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
 }
 .logo {
-  font-size: 72px; /* Büyük logo */
+  font-size: 72px;
   font-weight: bold;
-  letter-spacing: -2px;
+  letter-spacing: -4px;
+  user-select: none;
 }
 .logo span:nth-child(1) {
-  color: #0000cc;
+  color: #4285f4;
 } /* G */
 .logo span:nth-child(2) {
-  color: #ff0000;
+  color: #ea4335;
 } /* o */
 .logo span:nth-child(3) {
-  color: #ff9900;
+  color: #fbbc05;
 } /* o */
 .logo span:nth-child(4) {
-  color: #0000cc;
+  color: #4285f4;
 } /* g */
 .logo span:nth-child(5) {
-  color: #009900;
+  color: #34a853;
 } /* l */
 .logo span:nth-child(6) {
-  color: #ff0000;
+  color: #ea4335;
 } /* e */
-.beta {
-  font-size: 24px;
-  vertical-align: super;
-  color: #000000;
+.search-container {
+  position: relative;
+  width: min(90%, 584px);
 }
-.subtitle {
-  font-size: 18px;
-  margin: 30px 0 20px;
-}
-form {
-  margin: 20px 0;
-}
-input[type="text"] {
-  width: 400px;
-  padding: 4px;
+.search-input {
+  width: 100%;
+  height: 44px;
+  padding: 0 50px 0 16px;
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
   font-size: 16px;
-  border: 1px solid #000000;
+  outline: none;
+  box-shadow: none;
+  transition: box-shadow 0.2s;
 }
-input[type="submit"] {
-  padding: 4px 12px;
-  margin: 0 8px;
-  font-size: 14px;
-  background-color: #ffffff;
-  border: 2px outset #d3d3d3; /* 90'lar button stili */
+.search-input:hover,
+.search-input:focus {
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  border-color: rgba(223, 225, 229, 0);
+}
+.mic-icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background: url("https://www.gstatic.com/images/branding/product/1x/gsa_48dp.png")
+    no-repeat center / contain;
+  opacity: 0.6;
   cursor: pointer;
 }
-.small-links {
+.buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.btn {
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #3c4043;
   font-size: 14px;
-  margin: 10px 0;
+  margin: 11px 4px;
+  padding: 0 16px;
+  line-height: 27px;
+  height: 36px;
+  min-width: 54px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
 }
-.footer {
-  margin-top: 120px; /* Alt kısma boşluk */
-  background-color: #00ccff; /* Turkuaz */
-  padding: 20px 0;
+.btn:hover {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
+  border: 1px solid #dadce0;
+  color: #202124;
 }
-.footer-table {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  border-collapse: collapse;
-}
-.footer-table td {
-  vertical-align: top;
-  padding: 10px 20px;
-  width: 33%;
+footer {
+  background: #f2f2f2;
+  border-top: 1px solid #dadce0;
+  padding: 12px 20px;
   font-size: 14px;
+  color: #70757a;
 }
-.footer-table input[type="text"] {
-  width: 180px;
-  padding: 3px;
-  font-size: 13px;
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
 }
-.copyright {
-  margin-top: 20px;
-  font-size: 12px;
-  color: #000000;
+.footer-links a {
+  color: #70757a;
+  text-decoration: none;
+}
+.footer-links a:hover {
+  text-decoration: underline;
 }
