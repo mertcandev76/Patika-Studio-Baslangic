@@ -1,76 +1,105 @@
-* {
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  background-color: #ffffff;
+  color: #000000;
+  font-family:
+    Times New Roman,
+    serif; /* 90'lar havası için serif */
+  font-size: 13px;
 }
-body {
-  font-family: "Montserrat", sans-serif;
-  background-color: #121212;
-  color: #e0e0e0;
-  line-height: 1.6;
+a {
+  color: #0000ff;
+  text-decoration: underline;
 }
-header {
-  background: linear-gradient(to right, #1e1e1e, #0f0f0f);
-  padding: 1.5rem 0;
-  text-align: center;
-  border-bottom: 3px solid #ff6b35;
+a:visited {
+  color: #551a8b;
 }
-h1 {
-  font-family: "Roboto Slab", serif;
-  color: #ffd166;
-  font-size: 2.8rem;
-}
-nav {
-  background: #1e1e1e;
-  padding: 1rem;
-  text-align: center;
-}
-nav a {
-  color: #ff6b35;
-  text-decoration: none;
-  margin: 0 1.5rem;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-nav a:hover {
-  color: #ffd166;
+a:hover,
+a:active {
+  color: #ff0000;
 }
 .container {
-  max-width: 1100px;
-  margin: 2rem auto;
-  padding: 0 1.5rem;
-}
-.welcome {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-top: 100px; /* Üstten boşluk – logo ortada olsun */
 }
-.welcome h2 {
-  color: #ff6b35;
-  margin-bottom: 1rem;
+.logo {
+  font-size: 72px; /* Büyük logo */
+  font-weight: bold;
+  letter-spacing: -2px;
 }
-.products-list {
-  background: #1e1e1e;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+.logo span:nth-child(1) {
+  color: #0000cc;
+} /* G */
+.logo span:nth-child(2) {
+  color: #ff0000;
+} /* o */
+.logo span:nth-child(3) {
+  color: #ff9900;
+} /* o */
+.logo span:nth-child(4) {
+  color: #0000cc;
+} /* g */
+.logo span:nth-child(5) {
+  color: #009900;
+} /* l */
+.logo span:nth-child(6) {
+  color: #ff0000;
+} /* e */
+.beta {
+  font-size: 24px;
+  vertical-align: super;
+  color: #000000;
 }
-.products-list h3 {
-  color: #ffd166;
-  margin-bottom: 1.2rem;
-  text-align: center;
+.subtitle {
+  font-size: 18px;
+  margin: 30px 0 20px;
 }
-.products-list ul {
-  list-style-position: inside;
-  font-size: 1.1rem;
+form {
+  margin: 20px 0;
 }
-.products-list li {
-  margin: 0.8rem 0;
+input[type="text"] {
+  width: 400px;
+  padding: 4px;
+  font-size: 16px;
+  border: 1px solid #000000;
 }
-footer {
-  background: #0f0f0f;
-  text-align: center;
-  padding: 1.5rem;
-  margin-top: 3rem;
-  font-size: 0.9rem;
-  color: #aaa;
+input[type="submit"] {
+  padding: 4px 12px;
+  margin: 0 8px;
+  font-size: 14px;
+  background-color: #ffffff;
+  border: 2px outset #d3d3d3; /* 90'lar button stili */
+  cursor: pointer;
+}
+.small-links {
+  font-size: 14px;
+  margin: 10px 0;
+}
+.footer {
+  margin-top: 120px; /* Alt kısma boşluk */
+  background-color: #00ccff; /* Turkuaz */
+  padding: 20px 0;
+}
+.footer-table {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+.footer-table td {
+  vertical-align: top;
+  padding: 10px 20px;
+  width: 33%;
+  font-size: 14px;
+}
+.footer-table input[type="text"] {
+  width: 180px;
+  padding: 3px;
+  font-size: 13px;
+}
+.copyright {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #000000;
 }
